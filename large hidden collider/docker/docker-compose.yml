@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ctf-challenge:
+    build: .
+    ports:
+      - "51673:51673"
+    restart: unless-stopped
+

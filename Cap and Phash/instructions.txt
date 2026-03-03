@@ -1,0 +1,9 @@
+PCAP contains emails. These emails have a text file that points to a TryHackMe box, and a zip file containing a text file. 
+This contains a list of hashes for files stored on the server
+
+the tryhackme box has a web file server. The index.php contains a comment stating the form isn't obfuscated, which should lead to finding uploader.php
+
+uploading a file reveals the upload handler and download handler pages, which have random names. 
+as the list of hashes have been given, a simple bash script like wget can be used to download all of those files.
+
+these can then be searched for the flag
